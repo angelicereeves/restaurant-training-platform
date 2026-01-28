@@ -1,0 +1,26 @@
+[
+  {
+    "id": "welcome",
+    "moduleId": "onboarding",
+    "title": "Welcome to Harbor House Grill",
+    "content": "Welcome to the team! In this lesson, you'll learn our culture, service philosophy, and what we expect from every team member on the floor."
+  },
+  {
+    "id": "appearance",
+    "moduleId": "onboarding",
+    "title": "Appearance & Uniform Standards",
+    "content": "Team members must arrive in full uniform, clean and pressed. Hair should be neat, and shoes must be non-slip and polished."
+  },
+  {
+    "id": "allergens",
+    "moduleId": "menu",
+    "title": "Allergy Awareness",
+    "content": "Always ask guests about allergies. Notify the kitchen and manager immediately if a guest mentions a dietary restriction."
+  },
+  {
+    "id": "steps-of-service",
+    "moduleId": "service",
+    "title": "Steps of Service",
+    "content": "Greet guests within 30 seconds, offer beverages, explain specials, and check back within 2 minutes after food is delivered."
+  }
+]

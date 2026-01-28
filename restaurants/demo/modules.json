@@ -1,0 +1,32 @@
+[
+  {
+    "id": "onboarding",
+    "roleId": "server",
+    "name": "Onboarding Basics",
+    "description": "Core policies, expectations, and first-day procedures"
+  },
+  {
+    "id": "menu",
+    "roleId": "server",
+    "name": "Menu Knowledge",
+    "description": "Food, allergens, and upselling standards"
+  },
+  {
+    "id": "service",
+    "roleId": "server",
+    "name": "Service Standards",
+    "description": "Steps of service and guest experience"
+  },
+  {
+    "id": "front-desk",
+    "roleId": "host",
+    "name": "Front Desk Operations",
+    "description": "Greeting, waitlists, and reservations"
+  },
+  {
+    "id": "bar-setup",
+    "roleId": "bartender",
+    "name": "Bar Setup",
+    "description": "Opening, stocking, and closing the bar"
+  }
+]
