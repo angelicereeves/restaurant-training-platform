@@ -1,26 +1,74 @@
 [
-  {
-    "id": "welcome",
-    "moduleId": "onboarding",
-    "title": "Welcome to Harbor House Grill",
-    "content": "Welcome to the team! In this lesson, you'll learn our culture, service philosophy, and what we expect from every team member on the floor."
-  },
-  {
-    "id": "appearance",
-    "moduleId": "onboarding",
-    "title": "Appearance & Uniform Standards",
-    "content": "Team members must arrive in full uniform, clean and pressed. Hair should be neat, and shoes must be non-slip and polished."
-  },
-  {
-    "id": "allergens",
-    "moduleId": "menu",
-    "title": "Allergy Awareness",
-    "content": "Always ask guests about allergies. Notify the kitchen and manager immediately if a guest mentions a dietary restriction."
-  },
-  {
-    "id": "steps-of-service",
-    "moduleId": "service",
-    "title": "Steps of Service",
-    "content": "Greet guests within 30 seconds, offer beverages, explain specials, and check back within 2 minutes after food is delivered."
-  }
+    {
+  "id": "server-onboarding-culture",
+  "moduleId": "onboarding",
+  "title": "Our Culture at Harbor & Ember",
+  "content": "At Harbor & Ember, hospitality comes first. We believe every guest should feel welcomed, cared for, and confident in our team. Great service is proactive, professional, and warm. Anticipate needs, communicate clearly, and take ownership of every table you serve."
+},
+{
+  "id": "server-onboarding-expectations",
+  "moduleId": "onboarding",
+  "title": "Professional Expectations",
+  "content": "Arrive in full uniform, clean and pressed. Maintain polished shoes, neat hair, and minimal fragrance. Be on the floor ready to serve at your scheduled time, not walking in the door."
+},
+{
+  "id": "server-service-greeting",
+  "moduleId": "service",
+  "title": "The Perfect Greeting",
+  "content": "Greet guests within 30 seconds with eye contact and a smile. Introduce yourself by name, offer water, and highlight any featured cocktails or specials. A strong first impression sets the tone for the entire experience."
+},
+{
+  "id": "server-service-pacing",
+  "moduleId": "service",
+  "title": "Pacing the Experience",
+  "content": "Watch guest body language and table progress. Clear plates promptly, offer the next course naturally, and communicate delays honestly. The goal is a relaxed, unrushed meal that still flows smoothly."
+},
+{
+  "id": "server-menu-seafood",
+  "moduleId": "menu",
+  "title": "Seafood & Allergen Awareness",
+  "content": "Many of our dishes contain shellfish, dairy, and gluten. If a guest mentions an allergy, stop and clarify. Repeat it back, notify a manager, and mark it clearly in the POS. Never assume or guess."
+},
+{
+  "id": "server-menu-upselling",
+  "moduleId": "menu",
+  "title": "Upselling with Confidence",
+  "content": "Upselling is about guidance, not pressure. Suggest appetizers for the table, recommend a wine pairing with entrées, and always mention dessert options before presenting the check."
+},
+{
+  "id": "server-bev-pairings",
+  "moduleId": "beverages",
+  "title": "Pairing Drinks with the Menu",
+  "content": "Recommend crisp whites with seafood, bold reds with steaks, and signature cocktails as an experience, not just a drink. Use phrases like, 'Our Ember Old Fashioned pairs beautifully with the NY Strip.'"
+},
+{
+  "id": "server-pos-accuracy",
+  "moduleId": "pos",
+  "title": "POS Accuracy & Seat Numbers",
+  "content": "Repeat every order, confirm temperatures and modifiers, and use seat numbers when available. Accurate orders reduce remakes, comps, and guest frustration."
+},
+{
+  "id": "server-recovery-mistakes",
+  "moduleId": "recovery",
+  "title": "Turning Mistakes into Wins",
+  "content": "Acknowledge the issue, apologize sincerely, and act quickly. Never place blame. Involve a manager early—speed and care matter more than finding fault."
+},
+{
+  "id": "server-safety-sanitation",
+  "moduleId": "safety",
+  "title": "Sanitation & Clean Service Standards",
+  "content": "Wash hands frequently, avoid touching food-contact surfaces, and keep stations clean. Clean menus, check presenters, and pens regularly."
+},
+{
+  "id": "server-sidework-opening",
+  "moduleId": "sidework",
+  "title": "Opening Sidework Standards",
+  "content": "Set up your section completely before guests arrive. Stock stations, check table alignment, fill ice and beverages, and review specials with management."
+},
+{
+  "id": "server-sidework-closing",
+  "moduleId": "sidework",
+  "title": "Closing Sidework Standards",
+  "content": "Restock for the next shift, wipe down stations, sanitize tables, and complete checkout. Get manager approval before clocking out."
+}
 ]

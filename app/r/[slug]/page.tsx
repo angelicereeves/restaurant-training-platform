@@ -1,40 +1,67 @@
 import Link from "next/link"
 import { getRestaurant } from "@/lib/getRestaurant"
 
-export default async function RestaurantPage({
+export default async function RestaurantHomePage({
   params,
 }: {
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const { config, roles } = getRestaurant(slug)
+  const { config } = getRestaurant(slug)
 
   return (
     <main className="min-h-screen bg-gray-50 p-8">
       <div className="mx-auto max-w-4xl">
-        <h1 className="text-3xl font-bold" style={{ color: config.primaryColor }}>
-          {config.name}
-        </h1>
-        <p className="mt-2 text-gray-700">Select your role to begin training.</p>
+        <div className="rounded-2xl border bg-white p-8 shadow-sm">
+          <h1 className="text-4xl font-bold" style={{ color: config.primaryColor }}>
+            {config.name}
+          </h1>
 
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {roles.map((role) => (
+          <div
+            className="mt-4 h-1 w-20 rounded-full"
+            style={{ backgroundColor: config.secondaryColor }}
+        />
+
+
+          {config.motto && (
+            <p className="mt-3 text-lg text-gray-700">
+              {config.motto}
+            </p>
+          )}
+
+          {config.about && (
+            <p className="mt-6 text-gray-800 leading-relaxed">
+              {config.about}
+            </p>
+          )}
+
+          {config.values && config.values.length > 0 && (
+            <div className="mt-6">
+              <h2 className="text-xl font-bold text-gray-900">Our Standards</h2>
+              <ul className="mt-3 space-y-2 text-gray-800">
+                {config.values.map((v, i) => (
+                  <li key={i} className="flex gap-2">
+                    <span style={{ color: config.secondaryColor }}>•</span>
+                    <span>{v}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              key={role.id}
-              href={`/r/${slug}/roles/${role.id}`}
-              className="rounded-xl border bg-white p-5 shadow-sm transition hover:shadow"
+              href={`/r/${slug}/roles`}
+              className="inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold text-white"
+              style={{ backgroundColor: config.primaryColor }}
             >
-              <h2 className="text-xl font-semibold text-gray-900">{role.name}</h2>
-              <p className="mt-1 text-gray-600">{role.description}</p>
-              <p className="mt-3 text-sm font-medium" style={{ color: config.primaryColor }}>
-                Start →
-              </p>
+              Start Training →
             </Link>
-          ))}
+
+            
+          </div>
         </div>
       </div>
     </main>
   )
 }
-
-

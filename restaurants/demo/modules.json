@@ -1,32 +1,10 @@
 [
-  {
-    "id": "onboarding",
-    "roleId": "server",
-    "name": "Onboarding Basics",
-    "description": "Core policies, expectations, and first-day procedures"
-  },
-  {
-    "id": "menu",
-    "roleId": "server",
-    "name": "Menu Knowledge",
-    "description": "Food, allergens, and upselling standards"
-  },
-  {
-    "id": "service",
-    "roleId": "server",
-    "name": "Service Standards",
-    "description": "Steps of service and guest experience"
-  },
-  {
-    "id": "front-desk",
-    "roleId": "host",
-    "name": "Front Desk Operations",
-    "description": "Greeting, waitlists, and reservations"
-  },
-  {
-    "id": "bar-setup",
-    "roleId": "bartender",
-    "name": "Bar Setup",
-    "description": "Opening, stocking, and closing the bar"
-  }
+  { "id": "onboarding", "roleId": "server", "name": "Onboarding Basics", "description": "Policies, culture, expectations, and first-week success." },
+  { "id": "service", "roleId": "server", "name": "Steps of Service", "description": "Greeting, pacing, table maintenance, and hospitality." },
+  { "id": "menu", "roleId": "server", "name": "Menu Knowledge", "description": "Ingredients, allergens, modifications, and upselling." },
+  { "id": "beverages", "roleId": "server", "name": "Beverages", "description": "Non-alcoholic drinks, wine/beer basics, and bar etiquette." },
+  { "id": "pos", "roleId": "server", "name": "POS & Payments", "description": "Order entry, modifiers, comps/voids, splitting checks, and cashouts." },
+  { "id": "recovery", "roleId": "server", "name": "Guest Recovery", "description": "Fixing mistakes, handling complaints, and saving the experience." },
+  { "id": "safety", "roleId": "server", "name": "Food Safety & Allergens", "description": "Allergen protocol, sanitation basics, and safe service." },
+  { "id": "sidework", "roleId": "server", "name": "Sidework & Shift Success", "description": "Opening/closing duties, station setup, and end-of-shift standards." }
 ]

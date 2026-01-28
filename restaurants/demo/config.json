@@ -1,6 +1,14 @@
 {
   "slug": "demo",
-  "name": "Harbor House Grill",
+  "name": "Harbor & Ember",
+  "motto": "Coastal warmth. Wood-fired comfort. Elevated hospitality.",
+  "about": "Harbor & Ember is an upscale-casual coastal grill focused on fresh seafood, wood-fired classics, and genuine hospitality. Our standard is simple: every guest leaves feeling welcomed, well-fed, and well cared for.",
+  "values": [
+    "Warm, confident hospitality",
+    "Consistency over complexity",
+    "Clean, calm, professional teamwork",
+    "Own the table—solve problems fast"
+  ],
   "logo": "/logo.png",
   "primaryColor": "#0f766e",
   "secondaryColor": "#f59e0b",

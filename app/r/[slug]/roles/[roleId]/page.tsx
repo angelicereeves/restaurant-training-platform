@@ -7,7 +7,7 @@ export default async function RolePage({
   params: Promise<{ slug: string; roleId: string }>
 }) {
   const { slug, roleId } = await params
-  const { config, roles, modules } = getRestaurant(slug)
+  const { config, roles, modules, checklists } = getRestaurant(slug)
 
   const role = roles.find((r) => r.id === roleId)
   const roleModules = modules.filter((m) => m.roleId === roleId)
@@ -15,15 +15,20 @@ export default async function RolePage({
   if (!role) {
     return (
       <main className="min-h-screen bg-gray-50 p-8">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-gray-800">Role not found.</p>
-          <Link className="mt-4 inline-block underline" href={`/r/${slug}`}>
+        <div className="mx-auto max-w-4xl">
+          <p className="text-gray-900">Role not found.</p>
+          <Link className="mt-4 inline-block underline" href={`/r/${slug}/roles`}
+>
             Back
           </Link>
         </div>
       </main>
     )
   }
+
+  // Checklists are tied to moduleId, so check if this role has any
+  const roleModuleIds = new Set(roleModules.map((m) => m.id))
+  const roleHasChecklists = checklists.some((c) => roleModuleIds.has(c.moduleId))
 
   return (
     <main className="min-h-screen bg-gray-50 p-8">
@@ -38,28 +43,39 @@ export default async function RolePage({
         <p className="mt-2 text-gray-700">{role.description}</p>
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {/* Checklists card (same style as modules) */}
+          {roleHasChecklists && (
+            <Link
+              href={`/r/${slug}/roles/${roleId}/checklists`}
+              className="rounded-xl border bg-white p-5 shadow-sm transition hover:shadow"
+            >
+              <h2 className="text-lg font-semibold text-gray-900">Checklists</h2>
+              <p className="mt-1 text-gray-600">
+                Opening/closing duties, sidework, and standards to run every shift.
+              </p>
+              <p className="mt-3 text-sm font-medium" style={{ color: config.primaryColor }}>
+                Open →
+              </p>
+            </Link>
+          )}
+
+          {/* Module cards */}
           {roleModules.map((module) => (
             <Link
               key={module.id}
               href={`/r/${slug}/modules/${module.id}`}
               className="rounded-xl border bg-white p-5 shadow-sm transition hover:shadow"
             >
-              <h2 className="text-lg font-semibold text-gray-900">
-                {module.name}
-              </h2>
-              <p className="mt-1 text-gray-600">
-                {module.description}
-              </p>
+              <h2 className="text-lg font-semibold text-gray-900">{module.name}</h2>
+              <p className="mt-1 text-gray-600">{module.description}</p>
               <p className="mt-3 text-sm font-medium" style={{ color: config.primaryColor }}>
                 Open →
               </p>
             </Link>
           ))}
 
-          {roleModules.length === 0 && (
-            <p className="text-gray-600">
-              No modules assigned to this role yet.
-            </p>
+          {roleModules.length === 0 && !roleHasChecklists && (
+            <p className="text-gray-600">No modules assigned to this role yet.</p>
           )}
         </div>
       </div>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "server-opening",
+    "moduleId": "sidework",
+    "title": "Server Opening Checklist",
+    "items": [
+      "Clock in and check shift notes",
+      "Set up section (tables, chairs, sanitation)",
+      "Stock server station (napkins, silverware, to-go)",
+      "Fill ice and restock beverages",
+      "Review specials and 86’d items with manager"
+    ]
+  },
+  {
+    "id": "server-during-shift",
+    "moduleId": "service",
+    "title": "During Shift Standards Checklist",
+    "items": [
+      "Greet tables within 30 seconds",
+      "Two-minute / two-bite checkback",
+      "Maintain clean table tops (pre-bus regularly)",
+      "Offer another round before drinks are empty",
+      "Confirm dessert/coffee before presenting check"
+    ]
+  },
+  {
+    "id": "server-closing",
+    "moduleId": "sidework",
+    "title": "Server Closing Checklist",
+    "items": [
+      "Complete assigned sidework",
+      "Restock station for next shift",
+      "Wipe and sanitize section",
+      "Run checkout and close tabs",
+      "Get manager approval before clocking out"
+    ]
+  }
+]
