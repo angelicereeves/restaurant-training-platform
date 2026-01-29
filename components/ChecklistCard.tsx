@@ -1,4 +1,3 @@
-//components/ChecklistCard.tsx
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
@@ -12,20 +11,30 @@ type Props = {
 
 export function ChecklistCard({ storageKey, title, items, primaryColor }: Props) {
   const defaultState = useMemo(() => items.map(() => false), [items])
-  const [checked, setChecked] = useState<boolean[]>(defaultState)
 
-  useEffect(() => {
+  const [checked, setChecked] = useState<boolean[]>(() => {
     try {
       const raw = localStorage.getItem(storageKey)
-      if (!raw) return
+      if (!raw) return items.map(() => false)
+
       const parsed = JSON.parse(raw)
       if (Array.isArray(parsed) && parsed.length === items.length) {
-        setChecked(parsed)
+        return parsed.map(Boolean)
       }
+
+      return items.map(() => false)
     } catch {
-      // ignore
+      return items.map(() => false)
     }
-  }, [storageKey, items.length])
+  })
+
+  // If items change length (rare), keep state safe
+  useEffect(() => {
+    if (checked.length !== items.length) {
+      setChecked(items.map(() => false))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items.length])
 
   useEffect(() => {
     try {
