@@ -18,10 +18,5 @@
     "id": "kitchen",
     "name": "Kitchen",
     "description": "Food prep, safety, and kitchen procedures"
-  },
-  {
-    "id": "manager",
-    "name": "Manager",
-    "description": "Leadership, operations, and staff management"
   }
 ]

@@ -1,3 +1,4 @@
+//app/r/[slug]/roles/[roleId]/checklists/page.tsx
 import Link from "next/link"
 import { getRestaurant } from "@/lib/getRestaurant"
 import { ChecklistCard } from "@/components/ChecklistCard"

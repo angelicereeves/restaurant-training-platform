@@ -1,3 +1,4 @@
+//lib/getRestaurant.ts
 import fs from "fs"
 import path from "path"
 import { RestaurantConfig } from "@/types/restaurant"

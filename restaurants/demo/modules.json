@@ -1,10 +1,915 @@
 [
-  { "id": "onboarding", "roleId": "server", "name": "Onboarding Basics", "description": "Policies, culture, expectations, and first-week success." },
-  { "id": "service", "roleId": "server", "name": "Steps of Service", "description": "Greeting, pacing, table maintenance, and hospitality." },
-  { "id": "menu", "roleId": "server", "name": "Menu Knowledge", "description": "Ingredients, allergens, modifications, and upselling." },
-  { "id": "beverages", "roleId": "server", "name": "Beverages", "description": "Non-alcoholic drinks, wine/beer basics, and bar etiquette." },
-  { "id": "pos", "roleId": "server", "name": "POS & Payments", "description": "Order entry, modifiers, comps/voids, splitting checks, and cashouts." },
-  { "id": "recovery", "roleId": "server", "name": "Guest Recovery", "description": "Fixing mistakes, handling complaints, and saving the experience." },
-  { "id": "safety", "roleId": "server", "name": "Food Safety & Allergens", "description": "Allergen protocol, sanitation basics, and safe service." },
-  { "id": "sidework", "roleId": "server", "name": "Sidework & Shift Success", "description": "Opening/closing duties, station setup, and end-of-shift standards." }
+  {
+    "id": "server-onboarding-basics",
+    "roleId": "server",
+    "title": "Onboarding Basics",
+    "description": "Set expectations, reduce anxiety, establish standards, and prepare the server to begin hands-on training confidently.",
+    "estimatedMinutes": 75,
+    "lessonIds": [
+      "server-ob-welcome",
+      "server-ob-culture",
+      "server-ob-role",
+      "server-ob-team",
+      "server-ob-orientation",
+      "server-ob-standards",
+      "server-ob-safety",
+      "server-ob-training-process",
+      "server-ob-first-shift",
+      "server-ob-quiz"
+    ],
+    "order": 1
+  },
+  {
+    "id": "server-service-steps",
+    "roleId": "server",
+    "title": "Service Steps",
+    "description": "Step-by-step flow of service from greet to goodbye, including timing and table control.",
+    "estimatedMinutes": 60,
+    "lessonIds": [
+  "server-ss-overview",
+  "server-ss-greet",
+  "server-ss-beverages",
+  "server-ss-menu-guidance",
+  "server-ss-order-taking",
+  "server-ss-course-control",
+  "server-ss-checkbacks",
+  "server-ss-table-maintenance",
+  "server-ss-dessert-afterdinner",
+  "server-ss-check-drop-payment",
+  "server-ss-farewell",
+  "server-ss-recovery",
+  "server-ss-quiz"
 ]
+,
+    "order": 2
+  },
+  {
+    "id": "server-menu-basics",
+    "roleId": "server",
+    "title": "Menu Basics",
+    "description": "Menu structure, ingredient awareness, and how to guide guests confidently.",
+    "estimatedMinutes": 60,
+    "lessonIds": [
+  "server-mb-overview",
+  "server-mb-menu-map",
+  "server-mb-ingredients-allergens",
+  "server-mb-cooking-terms",
+  "server-mb-suggestive-selling",
+  "server-mb-mods-and-substitutions",
+  "server-mb-pairing-basics",
+  "server-mb_confidence-scripts",
+  "server-mb-quiz"
+]
+,
+    "order": 3
+  },
+  {
+    "id": "server-pos-basics",
+    "roleId": "server",
+    "title": "POS Basics",
+    "description": "Core POS actions servers need to ring accurately and move quickly.",
+    "estimatedMinutes": 45,
+    "lessonIds": [
+  "server-pos-overview",
+  "server-pos-login-navigation",
+  "server-pos-start-table",
+  "server-pos-modifiers",
+  "server-pos-allergies",
+  "server-pos-coursing",
+  "server-pos-voids-comps",
+  "server-pos-payment-basics",
+  "server-pos-splits",
+  "server-pos-issues-troubleshooting",
+  "server-pos-quiz"
+]
+,
+    "order": 4
+  },
+  {
+    "id": "server-sidework",
+    "roleId": "server",
+    "title": "Sidework & Shift Setup",
+    "description": "Opening and closing procedures, station setup, and consistent execution.",
+    "estimatedMinutes": 20,
+    "lessonIds": [
+  "server-sw-overview",
+  "server-sw-opening",
+  "server-sw-station-setup",
+  "server-sw-during-shift",
+  "server-sw-pre-bus-reset",
+  "server-sw-closing",
+  "server-sw-standards",
+  "server-sw-quiz"
+]
+,
+    "order": 5
+  },
+  {
+    "id": "server-service-standards",
+    "roleId": "server",
+    "title": "Service Standards",
+    "description": "Non-negotiable standards during service to keep guests happy and the floor running smoothly.",
+    "estimatedMinutes": 20,
+    "lessonIds": [
+  "server-ss-standards-overview",
+  "server-ss-greeting-standard",
+  "server-ss-timing-standards",
+  "server-ss-table-maintenance-standard",
+  "server-ss-communication-standard",
+  "server-ss-professionalism-standard",
+  "server-ss-problem-escalation",
+  "server-ss-consistency",
+  "server-ss-standards-quiz"
+]
+,
+    "order": 6
+  },
+  {
+  "id": "server-alcohol-service",
+  "roleId": "server",
+  "title": "Alcohol Service & Responsibility",
+  "description": "Responsible alcohol service, guest safety, and legal protection for the server and restaurant.",
+  "estimatedMinutes": 25,
+  "lessonIds": [
+  "server-as-overview",
+  "server-as-legal-responsibility",
+  "server-as-checking-ids",
+  "server-as-intoxication-signs",
+  "server-as-refusal-service",
+  "server-as-manager-involvement",
+  "server-as-documentation",
+  "server-as-quiz"
+]
+,
+  "order": 7
+},
+{
+  "id": "server-service-recovery",
+  "roleId": "server",
+  "title": "Service Recovery",
+  "description": "How to fix problems fast, protect the guest experience, and involve a manager the right way.",
+  "estimatedMinutes": 30,
+  "lessonIds": [
+    "server-sr-overview",
+    "server-sr-mindset",
+    "server-sr-recovery-steps",
+    "server-sr-common-issues",
+    "server-sr-delays-and-pacing",
+    "server-sr-food-mistakes",
+    "server-sr-drink-mistakes",
+    "server-sr-attitude-conflict",
+    "server-sr-manager-handoff",
+    "server-sr-follow-up",
+    "server-sr-quiz"
+  ],
+  "order": 8
+},
+{
+  "id": "server-advanced-guest-skills",
+  "roleId": "server",
+  "title": "Advanced Upselling & Guest Psychology",
+  "description": "How to read the table, make confident suggestions, increase check averages naturally, and elevate the guest experience.",
+  "estimatedMinutes": 25,
+  "lessonIds": [
+    "server-ag-overview",
+    "server-ag-read-the-table",
+    "server-ag-suggestion-framework",
+    "server-ag-beverage-upsell",
+    "server-ag-food-upsell",
+    "server-ag-special-occasions",
+    "server-ag-language-that-works",
+    "server-ag-common-mistakes",
+    "server-ag-quiz"
+  ],
+  "order": 9
+},
+{
+  "id": "server-evaluation-signoff",
+  "roleId": "server",
+  "title": "Manager Shadow & Evaluation Sign-Off",
+  "description": "Shadow shift expectations, evaluation criteria, and final sign-off process before solo shifts.",
+  "estimatedMinutes": 25,
+  "lessonIds": [
+    "server-es-overview",
+    "server-es-shadow-expectations",
+    "server-es-evaluation-criteria",
+    "server-es-service-flow-observation",
+    "server-es-pos-accuracy-observation",
+    "server-es_guest-issues-observation",
+    "server-es-standards-scorecard",
+    "server-es-signoff-process",
+    "server-es-quiz"
+  ],
+  "order": 10
+},
+{
+  "id": "server-es-overview",
+  "moduleId": "server-evaluation-signoff",
+  "title": "Evaluation & Sign-Off — Overview",
+  "type": "content",
+  "objective": "Understand what sign-off means and how you’ll be evaluated before working solo shifts.",
+  "blocks": [
+    {
+      "type": "callout",
+      "label": "Purpose",
+      "text": "Sign-off protects the guest experience and sets you up for success. It’s not about perfection — it’s about readiness."
+    },
+    {
+      "type": "subsection",
+      "title": "What Sign-Off Confirms",
+      "bullets": [
+        "You can run a section with calm control",
+        "You meet service standards consistently",
+        "You ring accurately in the POS",
+        "You communicate effectively with the team",
+        "You handle problems appropriately (and escalate when needed)"
+      ]
+    },
+    {
+      "type": "subsection",
+      "title": "How You Pass",
+      "bullets": [
+        "Consistency over perfection",
+        "Good habits under pressure",
+        "Strong guest communication",
+        "Accuracy and safety (especially allergies/alcohol)"
+      ]
+    }
+  ],
+  "order": 1
+},
+{
+  "id": "server-es-shadow-expectations",
+  "moduleId": "server-evaluation-signoff",
+  "title": "Shadow Shift Expectations",
+  "type": "content",
+  "objective": "Know what’s expected during shadowing and trainer/manager observation shifts.",
+  "blocks": [
+    {
+      "type": "subsection",
+      "title": "What You Should Do",
+      "bullets": [
+        "Arrive early and prepared (uniform, tools, notebook if used)",
+        "Ask questions early (don’t wait for a mistake)",
+        "Take ownership of your tables as assigned",
+        "Communicate clearly with trainer/lead/MOD",
+        "Stay calm and professional even when busy"
+      ]
+    },
+    {
+      "type": "subsection",
+      "title": "What You Should NOT Do",
+      "bullets": [
+        "Disappear from the floor",
+        "Guess on allergies or procedures",
+        "Over-promise to guests",
+        "Blame the kitchen/bar for problems"
+      ]
+    },
+    {
+      "type": "callout",
+      "label": "Mindset",
+      "text": "Shadow shifts are about learning and consistency — not showing off."
+    }
+  ],
+  "order": 2
+},
+{
+  "id": "server-es-evaluation-criteria",
+  "moduleId": "server-evaluation-signoff",
+  "title": "Evaluation Criteria (What We Look For)",
+  "type": "content",
+  "objective": "Understand the core areas you’re evaluated on before sign-off.",
+  "blocks": [
+    {
+      "type": "subsection",
+      "title": "The Core Categories",
+      "bullets": [
+        "Hospitality + guest connection",
+        "Steps of service execution",
+        "Timing and pacing control",
+        "Table maintenance (pre-bus, resets, refills)",
+        "POS accuracy and clean ticket writing",
+        "Team communication (expo/bar/host/MOD)",
+        "Safety: allergies and responsible alcohol service"
+      ]
+    },
+    {
+      "type": "subsection",
+      "title": "The Pass Standard",
+      "bullets": [
+        "Meets standards consistently",
+        "Corrects mistakes quickly and calmly",
+        "Accepts feedback professionally"
+      ]
+    }
+  ],
+  "order": 3
+},
+{
+  "id": "server-es-service-flow-observation",
+  "moduleId": "server-evaluation-signoff",
+  "title": "Observed Service Flow (What Good Looks Like)",
+  "type": "content",
+  "objective": "Know what “ready” looks like during a live evaluation shift.",
+  "blocks": [
+    {
+      "type": "subsection",
+      "title": "Green Flags",
+      "bullets": [
+        "Greets quickly and acknowledges tables even when busy",
+        "Controls pacing (courses don’t stack or stall)",
+        "Checkbacks happen on time (two-minute/two-bite)",
+        "Anticipates needs (refills, utensils, share plates)",
+        "Guests don’t have to chase you down"
+      ]
+    },
+    {
+      "type": "subsection",
+      "title": "Red Flags",
+      "bullets": [
+        "Long delays without communication",
+        "Missing checkbacks",
+        "Overwhelmed body language or visible frustration",
+        "Not pre-bussing (clutter builds)",
+        "No awareness of table pacing"
+      ]
+    }
+  ],
+  "order": 4
+},
+{
+  "id": "server-es-pos-accuracy-observation",
+  "moduleId": "server-evaluation-signoff",
+  "title": "Observed POS Accuracy (What Good Looks Like)",
+  "type": "content",
+  "objective": "Understand what clean, accurate POS performance looks like during evaluation.",
+  "blocks": [
+    {
+      "type": "subsection",
+      "title": "Green Flags",
+      "bullets": [
+        "Rings items correctly the first time",
+        "Uses modifiers instead of long notes",
+        "Seat numbers used when needed (splits, large parties)",
+        "Allergies flagged correctly and communicated",
+        "Fixes mistakes fast (void/transfer/re-ring)"
+      ]
+    },
+    {
+      "type": "subsection",
+      "title": "Red Flags",
+      "bullets": [
+        "Frequent re-fires due to ringing errors",
+        "Guessing modifications",
+        "No allergy process",
+        "Confusion with splits or payments"
+      ]
+    }
+  ],
+  "order": 5
+},
+{
+  "id": "server-es-guest-issues-observation",
+  "moduleId": "server-evaluation-signoff",
+  "title": "Observed Guest Issues (Recovery + Escalation)",
+  "type": "content",
+  "objective": "Demonstrate you can handle problems calmly and appropriately.",
+  "blocks": [
+    {
+      "type": "subsection",
+      "title": "What We Want to See",
+      "bullets": [
+        "Uses recovery steps: Listen → Apologize → Fix → Follow up",
+        "Communicates delays before guests complain",
+        "Escalates correctly (allergies, alcohol, aggressive guests, big comps)",
+        "Clear manager handoff (table, issue, what you did, what guest wants)"
+      ]
+    },
+    {
+      "type": "callout",
+      "label": "Standard",
+      "text": "If something feels like it could become a bigger problem, you escalate early."
+    }
+  ],
+  "order": 6
+},
+{
+  "id": "server-es-standards-scorecard",
+  "moduleId": "server-evaluation-signoff",
+  "title": "Standards Scorecard (Self-Check)",
+  "type": "content",
+  "objective": "Use a simple scorecard to evaluate your readiness and identify what to improve.",
+  "blocks": [
+    {
+      "type": "subsection",
+      "title": "Rate Yourself (1–5) After Each Shift",
+      "bullets": [
+        "Greeting and connection",
+        "Timing (checkbacks + refills)",
+        "Pacing control",
+        "Table maintenance",
+        "POS accuracy",
+        "Team communication",
+        "Safety (allergies/alcohol)",
+        "Recovery (how you handled issues)"
+      ]
+    },
+    {
+      "type": "subsection",
+      "title": "How to Use This",
+      "bullets": [
+        "Pick ONE area to improve next shift",
+        "Ask your trainer/lead for one coaching point",
+        "Track progress over 2–3 shifts"
+      ]
+    },
+    {
+      "type": "callout",
+      "text": "Improvement is a skill. Great servers don’t avoid feedback — they use it."
+    }
+  ],
+  "order": 7
+},
+{
+  "id": "server-es-signoff-process",
+  "moduleId": "server-evaluation-signoff",
+  "title": "Sign-Off Process (How Graduation Works)",
+  "type": "content",
+  "objective": "Know what happens after evaluation and what sign-off means operationally.",
+  "blocks": [
+    {
+      "type": "subsection",
+      "title": "Typical Sign-Off Steps",
+      "bullets": [
+        "Trainer recommends readiness (or identifies gaps)",
+        "Manager observation shift (as needed)",
+        "Final coaching notes (1–3 key focus points)",
+        "Sign-off approval for solo shifts"
+      ]
+    },
+    {
+      "type": "subsection",
+      "title": "If You’re Not Ready Yet",
+      "bullets": [
+        "You’ll get a clear plan (not vague criticism)",
+        "You’ll repeat targeted reps (POS accuracy, pacing, checkbacks, etc.)",
+        "You’ll be re-evaluated after improvement"
+      ]
+    },
+    {
+      "type": "callout",
+      "label": "Reminder",
+      "text": "Not passing on the first try is normal. The goal is confidence and consistency."
+    }
+  ],
+  "order": 8
+},
+{
+  "id": "server-es-quiz",
+  "moduleId": "server-evaluation-signoff",
+  "title": "Evaluation & Sign-Off Check",
+  "type": "quiz",
+  "objective": "Confirm you understand what’s evaluated and how to approach sign-off shifts.",
+  "quiz": {
+    "passingScore": 0.75,
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "What does sign-off primarily confirm?",
+        "options": [
+          "You are perfect at everything",
+          "You can consistently meet standards and run a section safely",
+          "You can upsell every table",
+          "You never make mistakes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sign-off is about consistent readiness and safety — not perfection."
+      },
+      {
+        "id": "q2",
+        "prompt": "What’s a major red flag during evaluation?",
+        "options": [
+          "Asking questions early",
+          "Missing checkbacks and not communicating delays",
+          "Using seat numbers",
+          "Pre-bussing regularly"
+        ],
+        "correctIndex": 1,
+        "explanation": "Guests losing trust usually comes from missing timing and communication."
+      },
+      {
+        "id": "q3",
+        "prompt": "Which situations require early manager involvement?",
+        "options": [
+          "Guests asking about menu items",
+          "Allergy concerns or alcohol over-service risk",
+          "Dropping waters",
+          "Running food"
+        ],
+        "correctIndex": 1,
+        "explanation": "Allergies and alcohol issues are safety and liability priorities."
+      },
+      {
+        "id": "q4",
+        "prompt": "How should you respond if you’re not signed off yet?",
+        "options": [
+          "Take it personally and stop asking questions",
+          "Ask for clear focus points and work targeted reps",
+          "Argue with the trainer",
+          "Avoid difficult tables"
+        ],
+        "correctIndex": 1,
+        "explanation": "Targeted reps + feedback are how you improve quickly and earn sign-off."
+      }
+    ]
+  },
+  "order": 9
+},
+{
+  "id": "server-menu-and-beverage-mastery",
+  "roleId": "server",
+  "title": "Menu & Beverage Mastery",
+  "description": "Full menu reference: dish descriptions, allergen awareness, signature cocktails, wines, beers, and how to describe them confidently.",
+  "estimatedMinutes": 45,
+  "lessonIds": [
+    "server-mbm-overview",
+    "server-mbm-food-overview",
+    "server-mbm-starters",
+    "server-mbm-mains",
+    "server-mbm-desserts",
+    "server-mbm-cocktails",
+    "server-mbm-wine",
+    "server-mbm-beer-na",
+    "server-mbm-allergens-faq",
+    "server-mbm-quiz"
+  ],
+  "order": 11
+},
+{
+  "id": "host-onboarding-basics",
+  "roleId": "host",
+  "title": "Host Onboarding Basics",
+  "description": "Set expectations, build confidence, and establish the host as a key operator in the guest experience.",
+  "estimatedMinutes": 60,
+  "lessonIds": [
+    "host-ob-welcome",
+    "host-ob-role-overview",
+    "host-ob-first-impressions",
+    "host-ob-team-communication",
+    "host-ob-professional-standards",
+    "host-ob-safety-awareness",
+    "host-ob-first-shift",
+    "host-ob-quiz"
+  ],
+  "order": 1
+},
+{
+  "id": "host-greeting-guest-experience",
+  "roleId": "host",
+  "title": "Greeting & Guest Experience",
+  "description": "How to greet guests warmly, set expectations, and create a positive first and last impression.",
+  "estimatedMinutes": 40,
+  "lessonIds": [
+    "host-ge-overview",
+    "host-ge-greeting-standards",
+    "host-ge-busy-door",
+    "host-ge-language",
+    "host-ge-body-language",
+    "host-ge-farewell",
+    "host-ge-quiz"
+  ],
+  "order": 2
+},
+
+{
+  "id": "host-reservations-waitlists-seating",
+  "roleId": "host",
+  "title": "Reservations, Waitlists & Seating Logic",
+  "description": "How to manage reservations and waitlists, quote accurate wait times, and seat strategically to protect flow and guest experience.",
+  "estimatedMinutes": 55,
+  "lessonIds": [
+    "host-rws-overview",
+    "host-rws-reservations-basics",
+    "host-rws-waitlist-basics",
+    "host-rws-quoting-waits",
+    "host-rws-seating-strategy",
+    "host-rws-large-parties",
+    "host-rws-special-requests",
+    "host-rws-late-reservations",
+    "host-rws-overbooking",
+    "host-rws-manager-escalation",
+    "host-rws-quiz"
+  ],
+  "order": 3
+},
+{
+  "id": "host-floor-flow-section-management",
+  "roleId": "host",
+  "title": "Floor Flow & Section Management",
+  "description": "How to manage sections, stagger seating, protect pacing, and keep the dining room running smoothly.",
+  "estimatedMinutes": 45,
+  "lessonIds": [
+    "host-ff-overview",
+    "host-ff-sections-basics",
+    "host-ff-staggering",
+    "host-ff-server-readiness",
+    "host-ff-kitchen-impact",
+    "host-ff-recovery",
+    "host-ff-quiz"
+  ],
+  "order": 4
+},
+{
+  "id": "host-checklists-shift-setup",
+  "roleId": "host",
+  "title": "Checklists & Shift Setup",
+  "description": "Opening, during-shift, and closing responsibilities that keep the host stand organized and the floor running smoothly.",
+  "estimatedMinutes": 30,
+  "lessonIds": [
+    "host-cs-overview",
+    "host-cs-opening",
+    "host-cs-during-shift",
+    "host-cs-closing",
+    "host-cs-common-misses",
+    "host-cs-quiz"
+  ],
+  "order": 5
+},
+{
+  "id": "host-difficult-guests-escalation",
+  "roleId": "host",
+  "title": "Difficult Guests & Escalation",
+  "description": "How to stay calm, de-escalate tense situations, and know exactly when to involve a manager.",
+  "estimatedMinutes": 40,
+  "lessonIds": [
+    "host-dg-overview",
+    "host-dg-mindset",
+    "host-dg-common-scenarios",
+    "host-dg-language",
+    "host-dg-boundaries",
+    "host-dg-when-to-escalate",
+    "host-dg-quiz"
+  ],
+  "order": 6
+},
+
+  {
+    "id": "bartender-onboarding-basics",
+    "roleId": "bartender",
+    "title": "Onboarding Basics",
+    "description": "Set expectations, establish bar standards, and build confidence before hands-on training.",
+    "estimatedMinutes": 60,
+    "lessonIds": [
+      "bt-ob-welcome",
+      "bt-ob-culture-standards",
+      "bt-ob-role-big-picture",
+      "bt-ob_team-communication",
+      "bt-ob-safety-responsibility",
+      "bt-ob-training-process",
+      "bt-ob-first-shift",
+      "bt-ob-quiz"
+    ],
+    "order": 1
+  },
+  {
+    "id": "bartender-bar-setup-workflow",
+    "roleId": "bartender",
+    "title": "Bar Setup & Workflow",
+    "description": "Station setup, mise en place, bar organization, and working clean and fast under pressure.",
+    "estimatedMinutes": 55,
+    "lessonIds": [
+      "bt-bw-overview",
+      "bt-bw-station-map",
+      "bt-bw-mise-en-place",
+      "bt-bw-ice-glassware",
+      "bt-bw-speed-cleanliness",
+      "bt-bw-rush-priorities",
+      "bt-bw-quiz"
+    ],
+    "order": 2
+  },
+  {
+    "id": "bartender-pos-tickets",
+    "roleId": "bartender",
+    "title": "POS & Ticket Management",
+    "description": "Core POS actions, splitting checks, tabs, and managing service well tickets efficiently.",
+    "estimatedMinutes": 45,
+    "lessonIds": [
+      "bt-pt-overview",
+      "bt-pt-tabs-payments",
+      "bt-pt-splits-comps",
+      "bt-pt-service-well-flow",
+      "bt-pt-communication",
+      "bt-pt-quiz"
+    ],
+    "order": 3
+  },
+  {
+    "id": "bartender-cocktail-standards",
+    "roleId": "bartender",
+    "title": "Cocktail Standards",
+    "description": "House specs, measuring, shaking/stirring, garnish standards, and consistent execution.",
+    "estimatedMinutes": 70,
+    "lessonIds": [
+      "bt-cs-overview",
+      "bt-cs-tools-techniques",
+      "bt-cs-measuring-consistency",
+      "bt-cs-ice-dilution",
+      "bt-cs-garnish-presentation",
+      "bt-cs-quality-control",
+      "bt-cs-quiz"
+    ],
+    "order": 4
+  },
+  {
+    "id": "bartender-beer-wine-basics",
+    "roleId": "bartender",
+    "title": "Beer & Wine Basics",
+    "description": "Serving standards, glassware, pours, common guest questions, and pairing fundamentals.",
+    "estimatedMinutes": 50,
+    "lessonIds": [
+      "bt-bw2-overview",
+      "bt-bw2-wine-service",
+      "bt-bw2-beer-service",
+      "bt-bw2-pairing-quick-guide",
+      "bt-bw2-quiz"
+    ],
+    "order": 5
+  },
+  {
+    "id": "bartender-guest-experience",
+    "roleId": "bartender",
+    "title": "Guest Experience at the Bar",
+    "description": "Hospitality, pacing, handling multiple guests, and staying in control of the bar top.",
+    "estimatedMinutes": 45,
+    "lessonIds": [
+      "bt-ge-overview",
+      "bt-ge-first-impression",
+      "bt-ge-bar-top-pacing",
+      "bt-ge-regulars-vips",
+      "bt-ge-service-recovery",
+      "bt-ge-quiz"
+    ],
+    "order": 6
+  },
+  {
+    "id": "bartender-responsible-alcohol-service",
+    "roleId": "bartender",
+    "title": "Responsible Alcohol Service",
+    "description": "ID checks, spotting intoxication, refusing service, and protecting guests and the business.",
+    "estimatedMinutes": 55,
+    "lessonIds": [
+      "bt-ras-overview",
+      "bt-ras-id-policy",
+      "bt-ras-intoxication-signs",
+      "bt-ras-refusal-scripts",
+      "bt-ras-manager-escalation",
+      "bt-ras-quiz"
+    ],
+    "order": 7
+  },
+  {
+    "id": "bartender-checklists-shift-setup",
+    "roleId": "bartender",
+    "title": "Checklists & Shift Setup",
+    "description": "Opening, during-shift standards, and closing procedures to keep the bar consistent and clean.",
+    "estimatedMinutes": 25,
+    "lessonIds": [
+      "bt-cl-overview",
+      "bt-cl-how-to-use",
+      "bt-cl-common-misses",
+      "bt-cl-quiz"
+    ],
+    "order": 8
+  },
+{
+  "id": "bartender-trainer-signoff",
+  "roleId": "bartender",
+  "title": "Trainer Sign-Off & Readiness",
+  "description": "Final evaluation and sign-off criteria before solo shifts.",
+  "estimatedMinutes": 25,
+  "lessonIds": [
+    "bt-ts-overview",
+    "bt-ts-criteria",
+    "bt-ts-observation",
+    "bt-ts-feedback",
+    "bt-ts-not-ready",
+    "bt-ts-signoff-process",
+    "bt-ts-quiz"
+  ],
+  "order": 50
+},
+
+ {
+  "id": "bartender-full-menu",
+  "roleId": "bartender",
+  "title": "Full Menu Reference",
+  "description": "Full food + beverage reference for bartenders.",
+  "estimatedMinutes": 45,
+  "lessonIds": [
+    "bt-menu-overview",
+    "bt-menu-food-full",
+    "bt-menu-cocktails-full",
+    "bt-menu-wine-full",
+    "bt-menu-beer-full",
+    "bt-menu-quiz"
+  ],
+  "order": 90
+},
+{
+  "id": "kitchen-onboarding-basics",
+  "roleId": "kitchen",
+  "title": "Kitchen Onboarding Basics",
+  "description": "Kitchen culture, communication, expectations, and how we operate as a team.",
+  "estimatedMinutes": 45,
+  "lessonIds": [
+    "kt-ob-welcome",
+    "kt-ob-culture",
+    "kt-ob-roles",
+    "kt-ob-communication",
+    "kt-ob-kitchen-flow",
+    "kt-ob-expectations"
+  ],
+  "order": 1
+},
+{
+  "id": "kitchen-food-safety",
+  "roleId": "kitchen",
+  "title": "Food Safety & Sanitation",
+  "description": "Food safety fundamentals, sanitation standards, and health compliance.",
+  "estimatedMinutes": 60,
+  "lessonIds": [],
+  "order": 2
+},
+{
+  "id": "kitchen-equipment-safety",
+  "roleId": "kitchen",
+  "title": "Knife Skills & Equipment Safety",
+  "description": "Safe knife handling, equipment use, and injury prevention.",
+  "estimatedMinutes": 45,
+  "lessonIds": [],
+  "order": 3
+},
+{
+  "id": "kitchen-mise-en-place",
+  "roleId": "kitchen",
+  "title": "Station Setup & Mise en Place",
+  "description": "Prep standards, par levels, labeling, and station readiness.",
+  "estimatedMinutes": 45,
+  "lessonIds": [],
+  "order": 4
+},
+{
+  "id": "kitchen-line-execution",
+  "roleId": "kitchen",
+  "title": "Line Execution & Ticket Flow",
+  "description": "Reading tickets, pacing, communication, and execution during service.",
+  "estimatedMinutes": 60,
+  "lessonIds": [],
+  "order": 5
+},
+{
+  "id": "kitchen-recipe-standards",
+  "roleId": "kitchen",
+  "title": "Recipe Standards & Portion Control",
+  "description": "Consistency, plating standards, and waste control.",
+  "estimatedMinutes": 40,
+  "lessonIds": [],
+  "order": 6
+},
+{
+  "id": "kitchen-allergens",
+  "roleId": "kitchen",
+  "title": "Allergens & Special Requests",
+  "description": "Allergy protocols, cross-contamination prevention, and communication.",
+  "estimatedMinutes": 30,
+  "lessonIds": [],
+  "order": 7
+},
+{
+  "id": "kitchen-closing-cleaning",
+  "roleId": "kitchen",
+  "title": "Closing, Cleaning & Accountability",
+  "description": "Breakdown procedures, storage, cleaning, and MOD sign-off.",
+  "estimatedMinutes": 45,
+  "lessonIds": [],
+  "order": 8
+},
+{
+  "id": "kitchen-trainer-signoff",
+  "roleId": "kitchen",
+  "title": "Trainer Sign-Off & Readiness",
+  "description": "Final evaluation before working a station independently.",
+  "estimatedMinutes": 25,
+  "lessonIds": [],
+  "order": 9
+}
+
+
+
+]
+
+
+
+

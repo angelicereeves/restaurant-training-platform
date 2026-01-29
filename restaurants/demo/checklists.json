@@ -1,7 +1,7 @@
 [
   {
     "id": "server-opening",
-    "moduleId": "sidework",
+    "moduleId": "server-sidework",
     "title": "Server Opening Checklist",
     "items": [
       "Clock in and check shift notes",
@@ -13,7 +13,7 @@
   },
   {
     "id": "server-during-shift",
-    "moduleId": "service",
+    "moduleId": "server-service-standards",
     "title": "During Shift Standards Checklist",
     "items": [
       "Greet tables within 30 seconds",
@@ -25,7 +25,7 @@
   },
   {
     "id": "server-closing",
-    "moduleId": "sidework",
+    "moduleId": "server-sidework",
     "title": "Server Closing Checklist",
     "items": [
       "Complete assigned sidework",
@@ -34,5 +34,94 @@
       "Run checkout and close tabs",
       "Get manager approval before clocking out"
     ]
-  }
+  },
+  {
+    "id": "host-opening",
+    "moduleId": "host-checklists-shift-setup",
+    "title": "Host Opening Checklist",
+    "items": [
+      "Clock in and review shift notes",
+      "Confirm sections and server assignments with MOD",
+      "Review reservations and large parties",
+      "Set up host stand (menus, iPad/clipboard, pens)",
+      "Confirm high chairs, boosters, accessibility needs",
+      "Check dining room cleanliness",
+      "Confirm patio / outdoor seating status (if applicable)"
+    ]
+  },
+  {
+    "id": "host-during-shift",
+    "moduleId": "host-checklists-shift-setup",
+    "title": "During Shift Host Standards",
+    "items": [
+      "Acknowledge every guest immediately",
+      "Maintain accurate waitlist",
+      "Quote realistic wait times",
+      "Stagger seating to protect servers",
+      "Communicate delays to guests early",
+      "Update MOD on floor pacing",
+      "Keep host stand clean and organized",
+      "No phone use at the host stand"
+    ]
+  },
+  {
+    "id": "host-closing",
+    "moduleId": "host-checklists-shift-setup",
+    "title": "Host Closing Checklist",
+    "items": [
+      "Clear and organize host stand",
+      "Restock menus and supplies",
+      "Return iPads / clipboards",
+      "Review next-day reservations",
+      "Communicate issues or notes to MOD",
+      "Confirm dining room reset if needed",
+      "Get MOD approval before clocking out"
+    ]
+  },
+  {
+  "id": "bartender-opening",
+  "moduleId": "bartender-checklists-shift-setup",
+  "title": "Bartender Opening Checklist",
+  "items": [
+    "Clock in and review shift notes",
+    "Set up bar top (wipe, sanitize, organize)",
+    "Stock ice wells and backup ice",
+    "Restock liquor, beer, wine, and mixers",
+    "Prepare garnishes (citrus, herbs, cherries, olives)",
+    "Check glassware levels and polish as needed",
+    "Confirm specials, 86’d items, and feature cocktails with MOD",
+    "Test POS and printers"
+  ]
+},
+{
+  "id": "bartender-during-shift",
+  "moduleId": "bartender-checklists-shift-setup",
+  "title": "During Shift Bartender Standards",
+  "items": [
+    "Acknowledge guests at the bar immediately",
+    "Maintain clean bar top (wipe regularly)",
+    "Monitor guest intoxication levels",
+    "Communicate delays to servers early",
+    "Restock during slow moments",
+    "Pre-bus glassware and clutter",
+    "Maintain calm, professional energy during rushes",
+    "No phone use behind the bar"
+  ]
+},
+{
+  "id": "bartender-closing",
+  "moduleId": "bartender-checklists-shift-setup",
+  "title": "Bartender Closing Checklist",
+  "items": [
+    "Complete bar sidework assignments",
+    "Break down and clean bar top and wells",
+    "Restock liquor, beer, wine, and mixers for next shift",
+    "Wrap and label garnishes properly",
+    "Clean bar tools and glassware",
+    "Run checkout and close bar tabs",
+    "Secure liquor storage per policy",
+    "Get MOD approval before clocking out"
+  ]
+}
+
 ]

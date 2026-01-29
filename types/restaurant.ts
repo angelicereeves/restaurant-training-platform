@@ -1,3 +1,4 @@
+//types/restaurant.ts
 export interface RestaurantConfig {
   slug?: string
   name: string

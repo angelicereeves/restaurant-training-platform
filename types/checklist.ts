@@ -1,3 +1,4 @@
+//types/checklist.ts
 export interface Checklist {
   id: string
   moduleId: string

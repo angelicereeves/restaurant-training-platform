@@ -1,3 +1,4 @@
+//app/r/[slug]/modules/[moduleId]/page.tsx
 import Link from "next/link"
 import { getRestaurant } from "@/lib/getRestaurant"
 
@@ -42,7 +43,8 @@ export default async function ModulePage({
           className="mt-4 text-3xl font-bold"
           style={{ color: config.primaryColor }}
         >
-          {trainingModule.name}
+          {trainingModule.title ?? trainingModule.name}
+
         </h1>
         <p className="mt-2 text-gray-700">
           {trainingModule.description}

@@ -1,4 +1,4 @@
-
+//app/r/[slug]/layout.tsx
 import Link from "next/link"
 import { getRestaurant } from "@/lib/getRestaurant"
 
