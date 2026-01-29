@@ -21,20 +21,11 @@ export function ChecklistCard({ storageKey, title, items, primaryColor }: Props)
       if (Array.isArray(parsed) && parsed.length === items.length) {
         return parsed.map(Boolean)
       }
-
       return items.map(() => false)
     } catch {
       return items.map(() => false)
     }
   })
-
-  // If items change length (rare), keep state safe
-  useEffect(() => {
-    if (checked.length !== items.length) {
-      setChecked(items.map(() => false))
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [items.length])
 
   useEffect(() => {
     try {
@@ -43,6 +34,13 @@ export function ChecklistCard({ storageKey, title, items, primaryColor }: Props)
       // ignore
     }
   }, [storageKey, checked])
+
+  useEffect(() => {
+    if (checked.length !== items.length) {
+      setChecked(items.map(() => false))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items.length])
 
   const completedCount = checked.filter(Boolean).length
   const allDone = items.length > 0 && completedCount === items.length

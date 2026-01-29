@@ -5,9 +5,9 @@ import type { Lesson } from "@/types/lesson"
 export default async function LessonPage({
   params,
 }: {
-  params: { slug: string; lessonId: string }
+  params: Promise<{ slug: string; lessonId: string }>
 }) {
-  const { slug, lessonId } = params
+  const { slug, lessonId } = await params
   const { config, lessons } = getRestaurant(slug)
 
   const lesson = lessons.find((l) => l.id === lessonId) as Lesson | undefined
@@ -25,8 +25,8 @@ export default async function LessonPage({
     )
   }
 
-  // Back-compat: if you still have legacy lessons with `content`
-  const legacyContent = "content" in lesson ? lesson.content : null
+  // Legacy support: old lessons had `content: string`
+  const legacyContent = "content" in lesson ? lesson.content : undefined
 
   return (
     <main className="min-h-screen bg-gray-50 p-8">

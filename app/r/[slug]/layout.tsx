@@ -10,9 +10,9 @@ export default async function RestaurantLayout({
   params,
 }: {
   children: React.ReactNode
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const { slug } = params
+  const { slug } = await params
   const { config } = getRestaurant(slug)
 
   const styleVars: CSSVarStyle = {
