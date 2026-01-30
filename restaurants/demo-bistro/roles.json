@@ -1,0 +1,22 @@
+[
+  {
+    "id": "server",
+    "name": "Server",
+    "description": "Service standards, menu knowledge, and guest experience"
+  },
+  {
+    "id": "host",
+    "name": "Host",
+    "description": "Greeting guests, managing reservations, and floor flow"
+  },
+  {
+    "id": "bartender",
+    "name": "Bartender",
+    "description": "Drinks, bar setup, and guest interaction"
+  },
+  {
+    "id": "kitchen",
+    "name": "Kitchen",
+    "description": "Food prep, safety, and kitchen procedures"
+  }
+]

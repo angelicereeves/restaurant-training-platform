@@ -1,0 +1,21 @@
+{
+  "slug": "demo-bistro",
+  "name": "Noir & Oak Bistro",
+  "motto": "Modern. Intimate. Impeccably trained.",
+  "about": "Noir & Oak is a modern bistro focused on seasonal small plates, craft cocktails, and a service style that’s confident, calm, and precise.",
+  "values": [
+    "Quiet confidence",
+    "Precision and pacing",
+    "Team-first execution",
+    "Own the guest experience"
+  ],
+  "logo": "/restaurants/demo-bistro/Noir&OakBistrologo.png",
+  "primaryColor": "#1d4ed8",
+  "secondaryColor": "#ec4899",
+  "backgroundColor": "#0b1220",
+  "textColor": "#e5e7eb",
+  "heroImage": "/restaurants/demo-bistro/Noir&OakBistrohero.jpg",
+  "heroAlt": "Noir & Oak Bistro interior",
+  "heroOverlay": true,
+  "enabledRoles": ["server", "host", "bartender", "kitchen"]
+}
