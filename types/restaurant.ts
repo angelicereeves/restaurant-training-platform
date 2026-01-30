@@ -21,4 +21,8 @@ export type RestaurantConfig = {
   // NEW (optional) photo assets
   heroImage?: string
   galleryImages?: string[]
+    heroAlt?: string
+  heroOverlay?: boolean
+
+
 }

@@ -16,16 +16,15 @@ export default async function RestaurantLayout({
   const { slug } = await params
   const { config } = getRestaurant(slug)
 
-  // Backwards-compatible theme fallbacks
   const primary = config.primaryColor ?? "#0f766e"
   const secondary = config.secondaryColor ?? "#f59e0b"
 
-  // Optional config additions (safe even if not present yet)
-  const bg = (config as any).backgroundColor ?? "#ffffff"
-  const text = (config as any).textColor ?? "#0f172a"
-  const heroImage = (config as any).heroImage as string | undefined
-  const heroAlt = ((config as any).heroAlt as string | undefined) ?? `${config.name} hero`
-  const heroOverlay = (config as any).heroOverlay !== false
+  const bg = config.backgroundColor ?? "#ffffff"
+  const text = config.textColor ?? "#0f172a"
+
+  const heroImage = config.heroImage
+  const heroAlt = config.heroAlt ?? `${config.name} hero`
+  const heroOverlay = config.heroOverlay !== false
 
   const styleVars: CSSVarStyle = {
     "--brand": primary,
@@ -39,14 +38,8 @@ export default async function RestaurantLayout({
       className="min-h-screen"
       style={{
         ...styleVars,
+        background: "var(--bg)",
         color: "var(--text)",
-        background: `
-          radial-gradient(
-            ellipse at top,
-            rgba(255, 255, 255, 0.9),
-            var(--bg)
-          )
-        `,
       }}
     >
       <header className="sticky top-0 z-10 border-b bg-white/80 backdrop-blur">

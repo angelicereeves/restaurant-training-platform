@@ -61,7 +61,8 @@ export default async function RoleChecklistsPage({
                 storageKey={`checklist:${slug}:${roleId}:${c.id}`}
                 title={c.title}
                 items={c.items}
-                primaryColor={config.primaryColor}
+                primaryColor={config.primaryColor ?? "#0f766e"}
+
               />
             ))}
           </div>
