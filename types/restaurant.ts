@@ -1,12 +1,24 @@
-//types/restaurant.ts
-export interface RestaurantConfig {
-  slug?: string
+// src/types/restaurant.ts
+
+export type RestaurantConfig = {
+  slug: string
   name: string
   motto?: string
   about?: string
   values?: string[]
-  logo: string
-  primaryColor: string
-  secondaryColor: string
-  enabledRoles: string[]
+
+  // existing fields you already use
+  logo?: string
+  primaryColor?: string
+  secondaryColor?: string
+  enabledRoles?: string[]
+
+  // NEW (optional) branding expansion
+  accentColor?: string
+  backgroundColor?: string
+  textColor?: string
+
+  // NEW (optional) photo assets
+  heroImage?: string
+  galleryImages?: string[]
 }

@@ -9,8 +9,23 @@
     "Clean, calm, professional teamwork",
     "Own the table—solve problems fast"
   ],
-  "logo": "/logo.png",
+  "logo": "/restaurants/demo/HarborandEmberlogo.png",
+
   "primaryColor": "#0f766e",
   "secondaryColor": "#f59e0b",
-  "enabledRoles": ["server", "host", "bartender", "kitchen", "manager"]
+
+  "accentColor": "#0ea5e9",
+ 
+
+  "backgroundColor": "#fff7ed",
+"textColor": "#0f172a",
+
+
+  "heroImage": "/restaurants/demo/HarborandEmberhero.jpg",
+  "galleryImages": [
+    "/restaurants/demo/HarborandEmber1.jpg",
+    "/restaurants/demo/HarborandEmber2.jpg"
+  ],
+
+  "enabledRoles": ["server", "host", "bartender", "kitchen"]
 }

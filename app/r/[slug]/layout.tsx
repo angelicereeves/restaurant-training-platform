@@ -1,3 +1,4 @@
+// app/r/[slug]/layout.tsx
 import Link from "next/link"
 import { getRestaurant } from "@/lib/getRestaurant"
 
@@ -15,24 +16,57 @@ export default async function RestaurantLayout({
   const { slug } = await params
   const { config } = getRestaurant(slug)
 
+  // Backwards-compatible theme fallbacks
+  const primary = config.primaryColor ?? "#0f766e"
+  const secondary = config.secondaryColor ?? "#f59e0b"
+
+  // Optional config additions (safe even if not present yet)
+  const bg = (config as any).backgroundColor ?? "#ffffff"
+  const text = (config as any).textColor ?? "#0f172a"
+  const heroImage = (config as any).heroImage as string | undefined
+  const heroAlt = ((config as any).heroAlt as string | undefined) ?? `${config.name} hero`
+  const heroOverlay = (config as any).heroOverlay !== false
+
   const styleVars: CSSVarStyle = {
-    "--brand": config.primaryColor,
-    "--accent": config.secondaryColor,
+    "--brand": primary,
+    "--accent": secondary,
+    "--bg": bg,
+    "--text": text,
   }
 
   return (
     <div
-      className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white via-slate-50 to-slate-100"
-      style={styleVars}
+      className="min-h-screen"
+      style={{
+        ...styleVars,
+        color: "var(--text)",
+        background: `
+          radial-gradient(
+            ellipse at top,
+            rgba(255, 255, 255, 0.9),
+            var(--bg)
+          )
+        `,
+      }}
     >
       <header className="sticky top-0 z-10 border-b bg-white/80 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
           <Link href={`/r/${slug}`} className="flex items-center gap-2">
-            <div
-              className="h-8 w-8 rounded-lg"
-              style={{ backgroundColor: "var(--brand)" }}
-              aria-hidden="true"
-            />
+            {config.logo ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={config.logo}
+                alt={`${config.name} logo`}
+                className="h-8 w-8 rounded-lg object-cover"
+              />
+            ) : (
+              <div
+                className="h-8 w-8 rounded-lg"
+                style={{ backgroundColor: "var(--brand)" }}
+                aria-hidden="true"
+              />
+            )}
+
             <span className="font-semibold text-slate-900">{config.name}</span>
           </Link>
 
@@ -54,7 +88,36 @@ export default async function RestaurantLayout({
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 py-10">{children}</main>
+      {/* Hero */}
+      {heroImage ? (
+        <section className="mx-auto max-w-5xl px-4 pt-6">
+          <div className="relative overflow-hidden rounded-2xl border bg-white shadow-sm">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={heroImage}
+              alt={heroAlt}
+              className="h-40 w-full object-cover sm:h-52"
+            />
+
+            {heroOverlay ? (
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+            ) : null}
+
+            <div className="absolute bottom-4 left-4 right-4">
+              <h1 className="text-xl font-semibold text-white sm:text-2xl">
+                {config.name}
+              </h1>
+              {config.motto ? (
+                <p className="mt-1 text-sm text-white/90 sm:text-base">
+                  {config.motto}
+                </p>
+              ) : null}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
 
       <footer className="mt-12 border-t bg-white/60">
         <div className="mx-auto max-w-5xl px-4 py-6 text-sm text-slate-500">
