@@ -58,14 +58,14 @@ function renderBlocks(blocks: LessonBlock[]) {
 export default async function LessonPage({
   params,
 }: {
-  params: { slug: string; lessonId: string }
+  params: Promise<{ slug: string; lessonId: string }>
 }) {
-  const slug = params.slug
-  const lessonId = decodeURIComponent(params.lessonId)
+  const { slug, lessonId } = await params
+  const decodedLessonId = decodeURIComponent(lessonId)
 
   const { config, lessons } = getRestaurant(slug)
 
-  const lesson = lessons.find((l) => l.id === lessonId) as Lesson | undefined
+  const lesson = lessons.find((l) => l.id === decodedLessonId) as Lesson | undefined
 
   if (!lesson) {
     return (
