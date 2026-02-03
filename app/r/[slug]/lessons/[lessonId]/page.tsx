@@ -1,14 +1,15 @@
-import Link from "next/link"
-import { getRestaurant } from "@/lib/getRestaurant"
-import type { Lesson, LessonBlock } from "@/types/lesson"
+import Link from "next/link";
+import { getRestaurant } from "@/lib/getRestaurant";
+import type { Lesson, LessonBlock } from "@/types/lesson";
+import QuizClient from "./quiz-client";
 
 function isLegacyLesson(lesson: Lesson): lesson is Extract<Lesson, { content: string }> {
-  return "content" in lesson
+  return "content" in lesson;
 }
 
 function renderBlocks(blocks: LessonBlock[]) {
   if (!Array.isArray(blocks) || blocks.length === 0) {
-    return <p>Lesson content coming soon.</p>
+    return <p>Lesson content coming soon.</p>;
   }
 
   return (
@@ -21,7 +22,7 @@ function renderBlocks(blocks: LessonBlock[]) {
                 {block.label ? <p className="font-semibold">{block.label}</p> : null}
                 <p className={block.label ? "mt-2" : ""}>{block.text}</p>
               </div>
-            )
+            );
 
           case "bullets":
             return (
@@ -30,7 +31,7 @@ function renderBlocks(blocks: LessonBlock[]) {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
-            )
+            );
 
           case "subsection":
             return (
@@ -45,27 +46,31 @@ function renderBlocks(blocks: LessonBlock[]) {
                   </ul>
                 ) : null}
               </section>
-            )
+            );
 
           default:
-            return null
+            return null;
         }
       })}
     </div>
-  )
+  );
 }
 
 export default async function LessonPage({
   params,
 }: {
-  params: Promise<{ slug: string; lessonId: string }>
+  // ✅ must be Promise in your Next 15 build setup
+  params: Promise<{ slug: string; lessonId: string }>;
 }) {
-  const { slug, lessonId } = await params
-  const decodedLessonId = decodeURIComponent(lessonId)
+  const { slug, lessonId } = await params;
+  const decodedLessonId = decodeURIComponent(lessonId);
 
-  const { config, lessons } = getRestaurant(slug)
+  const { config, lessons } = getRestaurant(slug);
 
-  const lesson = lessons.find((l) => l.id === decodedLessonId) as Lesson | undefined
+  // ✅ give a safe fallback so QuizClient always gets a string
+  const primaryColor = config.primaryColor ?? "#0f766e"; // teal-700 fallback
+
+  const lesson = lessons.find((l) => l.id === decodedLessonId) as Lesson | undefined;
 
   if (!lesson) {
     return (
@@ -77,20 +82,29 @@ export default async function LessonPage({
           </Link>
         </div>
       </main>
-    )
+    );
   }
+
+  const isLegacy = isLegacyLesson(lesson);
+  const moduleId = !isLegacy && "moduleId" in lesson ? lesson.moduleId : undefined;
 
   return (
     <main className="min-h-screen bg-gray-50 p-8">
       <div className="mx-auto max-w-3xl">
-        <Link
-          className="text-sm text-gray-600 underline"
-          href={`/r/${slug}/modules/${lesson.moduleId}`}
-        >
-          ← Back to lessons
-        </Link>
+        {moduleId ? (
+          <Link
+            className="text-sm text-gray-600 underline"
+            href={`/r/${slug}/modules/${moduleId}`}
+          >
+            ← Back to lessons
+          </Link>
+        ) : (
+          <Link className="text-sm text-gray-600 underline" href={`/r/${slug}`}>
+            ← Back
+          </Link>
+        )}
 
-        <h1 className="mt-4 text-3xl font-bold" style={{ color: config.primaryColor }}>
+        <h1 className="mt-4 text-3xl font-bold" style={{ color: primaryColor }}>
           {lesson.title}
         </h1>
 
@@ -99,25 +113,17 @@ export default async function LessonPage({
         ) : null}
 
         <div className="prose mt-6 max-w-none text-gray-900">
-          {isLegacyLesson(lesson) ? (
+          {isLegacy ? (
             <p>{lesson.content}</p>
           ) : lesson.type === "content" ? (
             renderBlocks(lesson.blocks)
           ) : lesson.type === "quiz" ? (
-            <div className="space-y-6">
-              <p>This lesson includes a short quiz.</p>
-              {lesson.quiz.questions.map((q, idx) => (
-                <div key={q.id} className="rounded-xl border bg-white p-4 shadow-sm">
-                  <p className="font-semibold">
-                    {idx + 1}. {q.prompt}
-                  </p>
-                  <ul className="mt-2 list-disc pl-6">
-                    {q.options.map((opt, i) => (
-                      <li key={i}>{opt}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className="not-prose">
+              <QuizClient
+                primaryColor={primaryColor}
+                passingScore={lesson.quiz.passingScore}
+                questions={lesson.quiz.questions}
+              />
             </div>
           ) : (
             <p>Lesson content coming soon.</p>
@@ -125,5 +131,5 @@ export default async function LessonPage({
         </div>
       </div>
     </main>
-  )
+  );
 }
